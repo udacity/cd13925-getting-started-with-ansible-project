@@ -1,0 +1,10 @@
+name: Call Reusable Greeting Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-greeting:
+    uses: ngoctuan1802/uda-github-actions/.github/workflows/greeting_template.yml@main
+    with:
+      actor: ${{ github.actor }}

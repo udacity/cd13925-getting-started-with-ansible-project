@@ -1,0 +1,8 @@
+- hosts: aws
+  become: true
+
+  task:
+  - name: create directory
+    file:
+      path: /srv/ansible-lab
+      state: directory

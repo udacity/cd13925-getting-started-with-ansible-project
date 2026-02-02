@@ -1,2 +1,11 @@
 - hosts: aws
   become: true
+
+  task:
+  - name: Ping
+    ping:
+    register: ping_output
+
+  - name: Output ping result
+    debug:
+      msg: "Ping result: {{ ping_output.ping }}"
